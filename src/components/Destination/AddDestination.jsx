@@ -53,7 +53,7 @@ const AddDestination = () => {
         <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-laugh-wink"></i>
         </div>
-        <div className="sidebar-brand-text mx-3"> <Link to='/admin_home' style={{color:"white",textDecoration:"none"}}>Admin </Link> <sup>2</sup></div>
+        <div className="sidebar-brand-text mx-3"> <Link to='/admin_home' style={{color:"white",textDecoration:"none"}}>TourWhiz  Admin </Link> </div>
     </a>
 
     {/* <!-- Divider --> */}

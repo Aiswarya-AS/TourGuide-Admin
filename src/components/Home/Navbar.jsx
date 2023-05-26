@@ -57,7 +57,7 @@ const Navbar = () => {
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3"> <Link to='/admin_home' className='text-decoration-none text-dark'>Admin </Link> </div>
+        <div className="sidebar-brand-text mx-3"> <Link to='/admin_home' style={{color:"white",textDecoration:"none"}}>TourWhiz Admin </Link> </div>
     </a>
 
     {/* <!-- Divider --> */}
