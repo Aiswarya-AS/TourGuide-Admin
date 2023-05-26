@@ -8,13 +8,31 @@ import Booking from './Booking'
 import Cookies from 'js-cookie'
 import axios from '../../utilis/axios'
 import { adminWalletGet } from '../../utilis/constants'
+import swal from 'sweetalert'
 const Navbar = () => {
     const navigate = useNavigate()
     const [status,setstatus]  = useState('')
     const [wallet,setWallet] = useState('')
     const handleLogout=()=>{
-        Cookies.remove('admin_jwt')
-        navigate('/')
+        swal({
+            title: "Are you sure?",
+            // text: "Once deleted, you will not be able to recover this item!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                Cookies.remove('admin_jwt')
+                navigate('/')
+                // swal("Item has been deleted!", {
+                //     icon: "success",
+                // });
+            } else {
+                swal("Item deletion has been cancelled!");
+            }
+        });
+       
     }
     const token=Cookies.get('admin_jwt')
     const handleClick=(s)=>{
@@ -39,7 +57,7 @@ const Navbar = () => {
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3"> Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3"> <Link to='/admin_home' className='text-decoration-none text-dark'>Admin </Link> </div>
     </a>
 
     {/* <!-- Divider --> */}

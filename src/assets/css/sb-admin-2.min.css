@@ -4439,7 +4439,8 @@ input[type=submit].btn-block {
 
 .nav-link:focus,
 .nav-link:hover {
-    text-decoration: none
+    text-decoration: none;
+    background-color:rgb(33, 33, 61);
 }
 
 .nav-link.disabled {

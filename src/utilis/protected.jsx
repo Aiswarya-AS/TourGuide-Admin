@@ -2,16 +2,16 @@ import Cookies from "js-cookie";
 import React from 'react';
 import { Navigate, Outlet } from "react-router-dom";
 
-// export const RequireLoginAdmin = () => {
-//     const token = Cookies.get("admin_jwt");
+export const RequireLoginAdmin = () => {
+    const token = Cookies.get("admin_jwt");
     
-//     return(
+    return(
         
     
-//         token ? <Outlet/> : <Navigate to="/" />
+        token ? <Outlet/> : <Navigate to="/" />
 
-//     )
-// };
+    )
+};
 
 export  function AuthorizeAdmin({children}){
     const token = Cookies.get("admin_jwt");
