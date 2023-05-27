@@ -26,9 +26,9 @@ const AddDestination = () => {
         formData.append('short_desc',data.short_desc)
         formData.append('description',data.description)
         
-        axios.post(addDestinationPost,formData
-//                    {
-//             headers: { "Content-Type": "multipart/form-data" }
+        axios.post(addDestinationPost,formData,
+                   {
+            headers: { "Content-Type": "multipart/form-data" }
         }).then((res)=>{
            toast.success('New Destination added successfully')
            reset();
