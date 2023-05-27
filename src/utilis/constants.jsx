@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:8000/";
+export const baseUrl = "https://api.tourwhiz.online/";
 export const userGet = 'admin1/users/'
 export const destinationGet = 'admin1/destinations/'
 export const guideGet = 'admin1/guides/'
